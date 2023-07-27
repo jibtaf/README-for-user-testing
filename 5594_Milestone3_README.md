@@ -1,6 +1,6 @@
 # Milestone 3 README
 
-![img](./assets/Screenshot 2023-07-27 at 23.21.08.png)
+<img src="./assets/Screenshot 2023-07-27 at 23.21.08.png" alt="Screenshot 2023-07-27 at 23.21.08" style="zoom:50%;" />
 
 ## **Team Name**
 
