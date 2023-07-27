@@ -1,6 +1,6 @@
 # Milestone 3 README
 
-[TOC]
+![img](./assets/Screenshot 2023-07-27 at 23.21.08.png)
 
 ## **Team Name**
 
