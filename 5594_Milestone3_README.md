@@ -113,7 +113,7 @@ The API Gateway is implemented with Hertz, following the IDL file named **gatewa
 
 **This IDL file defines the interfaces for the API services, which are then implemented by the handlers.**
 
-**<img src="./assets/Screenshot 2023-07-26 at 12.37.08.png" alt="Screenshot 2023-07-26 at 12.37.08" style="zoom: 50%;" />**
+<img src="./assets/Screenshot 2023-07-26 at 12.37.08.png" alt="Screenshot 2023-07-26 at 12.37.08" style="zoom: 50%;" />
 
 The API Gateway also registers all the routers based on the `api.${HTTP Method}` annotation in the IDL. 
 
@@ -231,7 +231,7 @@ These services will return a Response instance comprising a **status code** (200
 
 4. ## Load balancing
 
-![img](./assets/BHbLBjnNU_mm_3SmnT7LGzi-FFV2dRtk7VFG0AEbKIpLmtDrTpQYUvlqgn6BmJ925M0QUnCe80bFCpADVMwC-CZgDb3Ayo8fPIrPIciWoBDti8KiY8VHq5L43FpFvy0IhI_LWStXdtoqo4QKqi-y-ec.png)
+<img src="./assets/BHbLBjnNU_mm_3SmnT7LGzi-FFV2dRtk7VFG0AEbKIpLmtDrTpQYUvlqgn6BmJ925M0QUnCe80bFCpADVMwC-CZgDb3Ayo8fPIrPIciWoBDti8KiY8VHq5L43FpFvy0IhI_LWStXdtoqo4QKqi-y-ec.png" alt="img" />
 Load balancing manages the request distribution, which can evenly distribute requests among available backend RPC servers.
 
 5. ## Service Register and Discovery(consul)
@@ -240,8 +240,8 @@ We are using **consul** for service registry and discovery.
 
 “Consul is a distributed, highly-available, and multi-datacenter aware tool for service discovery, configuration, and orchestration. Consul enables rapid deployment, configuration, and maintenance of service-oriented architectures at massive scale.”
 
-![img](./assets/cDUhiKzMgdlMeXauKKV0J6TIVUs04i7gLAGkEdFHoetMKmxd5Ol5QJt-dZ02zixM7J1mr9aRhHlY-Xxeflyaql0ddyh8LrAOEV8MEnJulMWCG5sYzBUKnjojHJ20qTfSVFWxAaF3vYOC2a-Grw-fPt0.png)
-![img](./assets/DRgro7abRrIflF24-pJP405cLMNRVgz2Bl4xl-prGxa0dHcSbUIrPiVEKtLSVLLMQ_RNwEWd-WznSD1uwMz44wPZ2pbJyukNFB0o-0ZS6EYDpWd-xWnzCOl6oODULAm3AkZLGzLv8HEv6F42y6IV2k0.png)
+<img src="./assets/cDUhiKzMgdlMeXauKKV0J6TIVUs04i7gLAGkEdFHoetMKmxd5Ol5QJt-dZ02zixM7J1mr9aRhHlY-Xxeflyaql0ddyh8LrAOEV8MEnJulMWCG5sYzBUKnjojHJ20qTfSVFWxAaF3vYOC2a-Grw-fPt0.png" alt="img" />
+<img src="./assets/DRgro7abRrIflF24-pJP405cLMNRVgz2Bl4xl-prGxa0dHcSbUIrPiVEKtLSVLLMQ_RNwEWd-WznSD1uwMz44wPZ2pbJyukNFB0o-0ZS6EYDpWd-xWnzCOl6oODULAm3AkZLGzLv8HEv6F42y6IV2k0.png" alt="img" />
 
 When creating the generic client for generic call, it is provided with an option to have a consul resolver to connect to the consul server at `127.0.0.1:8500` for service discovery.
 
@@ -446,8 +446,8 @@ We use Git and GitHub to keep track of every modification to the code.
 
 - To test if the API Gateway can direct the request to backend RPC servers via Generic Call
 
-  - ![Screenshot 2023-07-26 at 11.28.43](./assets/Screenshot 2023-07-26 at 11.28.43.png)
-    ![Screenshot 2023-07-26 at 11.29.10](./assets/Screenshot 2023-07-26 at 11.29.10.png)
+  - <img src="./assets/Screenshot 2023-07-26 at 11.28.43.png" alt="Screenshot 2023-07-26 at 11.28.43" />
+    <img src="./assets/Screenshot 2023-07-26 at 11.29.10.png" alt="Screenshot 2023-07-26 at 11.29.10" />
 
   - Expected Response:
 
@@ -464,8 +464,8 @@ We use Git and GitHub to keep track of every modification to the code.
 
   1. Handler logic for `SayHello()` service
 
-     - ![Screenshot 2023-07-26 at 11.38.56](./assets/Screenshot 2023-07-26 at 11.38.56.png)
-       ![Screenshot 2023-07-26 at 11.39.54](./assets/Screenshot 2023-07-26 at 11.39.54.png)
+     - <img src="./assets/Screenshot 2023-07-26 at 11.38.56.png" alt="Screenshot 2023-07-26 at 11.38.56" />
+       <img src="./assets/Screenshot 2023-07-26 at 11.39.54.png" alt="Screenshot 2023-07-26 at 11.39.54" />
 
      - Expected Response:
 
@@ -489,8 +489,8 @@ We use Git and GitHub to keep track of every modification to the code.
 
   2. Handler logic for `InsertUser()` service
 
-     - ![Screenshot 2023-07-26 at 11.41.16](./assets/Screenshot 2023-07-26 at 11.41.16.png)
-       ![Screenshot 2023-07-26 at 11.41.39](./assets/Screenshot 2023-07-26 at 11.41.39.png)
+     - <img src="./assets/Screenshot 2023-07-26 at 11.41.16.png" alt="Screenshot 2023-07-26 at 11.41.16" />
+       <img src="./assets/Screenshot 2023-07-26 at 11.41.39.png" alt="Screenshot 2023-07-26 at 11.41.39" />
 
      - Expected Response:
 
@@ -514,8 +514,8 @@ We use Git and GitHub to keep track of every modification to the code.
 
   3. Handler logic for `InsertProduct()` service
 
-     - ![Screenshot 2023-07-26 at 11.43.55](./assets/Screenshot 2023-07-26 at 11.43.55.png)
-       ![Screenshot 2023-07-26 at 11.44.19](./assets/Screenshot 2023-07-26 at 11.44.19.png)
+     - <img src="./assets/Screenshot 2023-07-26 at 11.43.55.png" alt="Screenshot 2023-07-26 at 11.43.55" />
+       <img src="./assets/Screenshot 2023-07-26 at 11.44.19.png" alt="Screenshot 2023-07-26 at 11.44.19" />
 
      - Expected Response:
 
@@ -540,7 +540,7 @@ We use Git and GitHub to keep track of every modification to the code.
 
   Run the command `ab -n 15 -T 'application/json' -p ./testUser.json http://localhost:8080/user/insert` to use the apache benchmark tool to send 15 POST requests to call the `InsertUser()` service.
 
-  ![Screenshot 2023-07-26 at 11.59.59](./assets/Screenshot 2023-07-26 at 11.59.59.png)
+  <img src="./assets/Screenshot 2023-07-26 at 11.59.59.png" alt="Screenshot 2023-07-26 at 11.59.59" />
   The 15 requests are evenly distributed to 3 user_server instances.
 
   - ==PASS==
@@ -566,34 +566,34 @@ For benchmarking, we have used the ‘testing’ package of Golang and Hertz. We
 
 1. BenchmarkSayHello
 
-![img](./assets/e3WARqd4md1qv5RbnedkBU8hLQycCqJxyy4dtcmL0ALQIMks_xa9ZUo5l4eKNKepeuehpxBk9dqgvqTYjNPkwly1j8uVzL2L2sJIy6BqaoXxQW9PZbEuNwPbL8_z2N2F_lZuIaGWDlvNFVcfVItgXKE.png)![img](https://lh6.googleusercontent.com/VePPDFljfwjdv6wpdWF3yIerCqcRUAiPk3h0aOR-8q-JPk6ozCkMTDDeZJ-49jXlzdlAnLj8-UbFTjZ8P-hFK50VRxGzembLgXhrWF4R_TnPFqFdK8YldOF_suO0lyOF0U2HH7oEFpOK_FCDFDzLJ3s)
+<img src="./assets/e3WARqd4md1qv5RbnedkBU8hLQycCqJxyy4dtcmL0ALQIMks_xa9ZUo5l4eKNKepeuehpxBk9dqgvqTYjNPkwly1j8uVzL2L2sJIy6BqaoXxQW9PZbEuNwPbL8_z2N2F_lZuIaGWDlvNFVcfVItgXKE.png" alt="img" />![img](https://lh6.googleusercontent.com/VePPDFljfwjdv6wpdWF3yIerCqcRUAiPk3h0aOR-8q-JPk6ozCkMTDDeZJ-49jXlzdlAnLj8-UbFTjZ8P-hFK50VRxGzembLgXhrWF4R_TnPFqFdK8YldOF_suO0lyOF0U2HH7oEFpOK_FCDFDzLJ3s)
 
-![img](./assets/g7FFH44Py39DKpPWEk8ZloA640cZZAgCVcewXlJ2GcxcNfS0nck0QptPWgXOf6arcakpe4USVbLmiqIC2GbE6dZMZklK2iA169AJBlECl4T0_JOuVYNLlP7zr-l-uOCWgO2p37BwXJiXv46Yaem5M-Y.png)
+<img src="./assets/g7FFH44Py39DKpPWEk8ZloA640cZZAgCVcewXlJ2GcxcNfS0nck0QptPWgXOf6arcakpe4USVbLmiqIC2GbE6dZMZklK2iA169AJBlECl4T0_JOuVYNLlP7zr-l-uOCWgO2p37BwXJiXv46Yaem5M-Y.png" alt="img" />
 
 2. BenchmarkInsertUser
 
-![img](./assets/0YLRUXytx83rDeLKAKZylI2WNyK4VFY5rTLlJqyeibUyCuzZnGd45QaGw4thrVoA-7q2c3QchLnEVtKuCuAxTTlmTetRMHbYhhQTyEdVIjN2wAX2aurBsxNHR6prXfQMa7pIzuqKCg5mcI9QyCqzR4A.png)![img](https://lh5.googleusercontent.com/Khc2NB7lVZ7rQUJQEVw08sE7L0kcqvAs2Rxpd0Uo2K4iaQmxMF6skPQqKFclcPhzXxvJX69uoEe8hjAUYSDOSnGoWXk3csCrrOjOj8i9KtR2ohXrUFN_8f5Ot4V7bBM0-3CAbH8Z3Bxs25TW2TlQ1IA)
+<img src="./assets/0YLRUXytx83rDeLKAKZylI2WNyK4VFY5rTLlJqyeibUyCuzZnGd45QaGw4thrVoA-7q2c3QchLnEVtKuCuAxTTlmTetRMHbYhhQTyEdVIjN2wAX2aurBsxNHR6prXfQMa7pIzuqKCg5mcI9QyCqzR4A.png" alt="img" />![img](https://lh5.googleusercontent.com/Khc2NB7lVZ7rQUJQEVw08sE7L0kcqvAs2Rxpd0Uo2K4iaQmxMF6skPQqKFclcPhzXxvJX69uoEe8hjAUYSDOSnGoWXk3csCrrOjOj8i9KtR2ohXrUFN_8f5Ot4V7bBM0-3CAbH8Z3Bxs25TW2TlQ1IA)
 
-![img](./assets/2SxQQXkaI42RzoGSBFFLaIYyE0dffPj1TVWRsHn5klYe5RKV3hTj21u988HOHre9ub2pmhKaHvBpqicfN5s3QiYZ01Sfoq1eWZgvtTRWMPatOXkAhVRDheJfql5v37FfPr4W6IUjxMJ77HkhzIrqfK4.png)
+<img src="./assets/2SxQQXkaI42RzoGSBFFLaIYyE0dffPj1TVWRsHn5klYe5RKV3hTj21u988HOHre9ub2pmhKaHvBpqicfN5s3QiYZ01Sfoq1eWZgvtTRWMPatOXkAhVRDheJfql5v37FfPr4W6IUjxMJ77HkhzIrqfK4.png" alt="img" />
 
 3. BenchmarkInsertProduct
 
-![img](./assets/Jh2-h1WOhwYAEP-UgzDdzmCKkALUchsX4XKMv5qVGki50Ea0mFR2aarlmHP6hSQg6yg3fkE3t7csClCozNlfspMgAd19dVDeRGvtOyRtP-y-yOrY2VQMLA0U4Yj7yL00Ck1gwkV0xhPE17haYT-PHJ4.png)![img](./assets/MNJ6MenqCDt2uPoRZk_3inFc3q88Bs25C9v78EjsuByQ9vkk0ifU2Qbma3qt36MYK9dbbpIC2xpgltITAyuf5YytfB7x_xKYdjPGHA_O0cTHwaxF_Ef73_7nmK5m1MNFqA1T78V5NSxWYItvDatC-YM.png)
+<img src="./assets/Jh2-h1WOhwYAEP-UgzDdzmCKkALUchsX4XKMv5qVGki50Ea0mFR2aarlmHP6hSQg6yg3fkE3t7csClCozNlfspMgAd19dVDeRGvtOyRtP-y-yOrY2VQMLA0U4Yj7yL00Ck1gwkV0xhPE17haYT-PHJ4.png" alt="img" />![img](./assets/MNJ6MenqCDt2uPoRZk_3inFc3q88Bs25C9v78EjsuByQ9vkk0ifU2Qbma3qt36MYK9dbbpIC2xpgltITAyuf5YytfB7x_xKYdjPGHA_O0cTHwaxF_Ef73_7nmK5m1MNFqA1T78V5NSxWYItvDatC-YM.png)
 
-![img](./assets/PZIK5dvQbKpDprgFNTLe_P1VE_qI-V1ReonfDbmA040RXZAvs7Db61uK0x_MVGEFysqyHkUPI3hCIebrVBF-Nqk6_UMVPo2bojb3St0UmH0DmSuT3XRemCMi7etv6QMorGxyP4tCG90sKmNVvIw3UCc.png)
+<img src="./assets/PZIK5dvQbKpDprgFNTLe_P1VE_qI-V1ReonfDbmA040RXZAvs7Db61uK0x_MVGEFysqyHkUPI3hCIebrVBF-Nqk6_UMVPo2bojb3St0UmH0DmSuT3XRemCMi7etv6QMorGxyP4tCG90sKmNVvIw3UCc.png" alt="img" />
 
 We have also used **Apache Bench** and **pprof** for benchmarking:
 
 We have run some commands like :`ab -n 5000 -c 100 -T 'application/json' -p ./testProduct.json http://localhost:8080/product/insert`, which means sending 5000 requests with a JSON body in the `testProduct.json` file, where every 100 are in concurrency, to `http://localhost:8080/product/insert`.
 
 And we have obtained the following result:
-![profile001](./assets/profile001.png)
+<img src="./assets/profile001.png" alt="profile001" />
 From the Callgraph, we noticed that the generic call used very little resources compared to the Golang `syscall.syscall` function, thus it is somewhat efficient.
 
 However, when it comes to the space-usage, the whole framework is less efficient:
 
-![Screenshot 2023-07-27 at 16.51.02](./assets/Screenshot 2023-07-27 at 16.51.02.png)
-![profile002](./assets/profile002.png)
+<img src="./assets/Screenshot 2023-07-27 at 16.51.02.png" alt="Screenshot 2023-07-27 at 16.51.02" />
+<img src="./assets/profile002.png" alt="profile002" />
 
 ### Interpreting the Callgraph
 
