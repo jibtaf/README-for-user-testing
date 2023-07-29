@@ -273,7 +273,11 @@ The `hzUpdate()` function will execute the commands inside the `â€œupdateIDL.shâ
 Then, this mechanism is encapsulated into the UpdateIDL() function, and is run on a separate goroutine, which ensures the update is executed asynchronously, so that the API Gateway is not affected.
 
 
-# **Architecture**
+# **Design Diagrams and Architecture**
+
+### Class Diagram
+
+<img src="./assets/Class Diagram.png" alt="Class Diagram" />
 
 <img src="./assets/0xHtOB2uM-zvrUhcekQOm73ow3EP_Njfv1w9uVu_Vwl9Up9KLA3zx7flgEE-oRtkKuK8D2WAe-FIAAeYp5nbRiQHFgGWqMjvK-NU8pgCkTF_yz6DhPoP3X6rWdhYwZRvyr136XwKZzCLvKDdd6xMwqU.png" alt="img" style="zoom:50%;" />
 
@@ -367,7 +371,7 @@ e.g. Send a GET request to `0.0.0.0:8080/hello` with the following JSON body:
 }
 ```
 
-Send a POST request to 0.0.0.0:8080/product/insert with the following JSON body:
+Send a POST request to `0.0.0.0:8080/product/insert` with the following JSON body:
 
 ```json
 {
