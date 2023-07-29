@@ -99,7 +99,12 @@ And there are some criteria for this API Gateway:
 
 ## **User Stories**
 
-Once upon a time, two developers relied on CloudWeGo for their projects. They desired an API Gateway feature to efficiently manage request transmission and build a comprehensive set of microservices systems. Working closely with CloudWeGo's team, the feature was developed, empowering users to streamline communication between microservices. With its seamless integration, developers found increased performance, stability, and scalability. This innovation sparked a thriving community, sharing experiences and transforming the world of microservices development.
+- As a user, I want a gateway to manage my APIs, so that they are easily accessible.
+- As a user, I want a gateway to help with routing and load balaning, so that my servers do not die easily.
+- As a user, I want a gateway which can send request faster and more effectively so that I can improve my efficiency.
+- As a user, I want a gateway to send requests in JSON so that it can improve the internal structure of my applications.
+- As a user, I want a gateway that is robust and very easy to troubleshooting (with logging and tracing), so that more resources can be saved.
+- As a user, I want a gateway that can adapt to changes of APIs quickly and easily, so that the services will not be disrupted.
 
 
 
