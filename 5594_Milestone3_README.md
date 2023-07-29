@@ -229,16 +229,23 @@ We have built a user server and a product server for testing purposes. They prov
 These services will return a Response instance comprising a **status code** (200 if the function returns with no error), a piece of **message** and the **data** being transmitted (either a user instance or a product instance). The response will then be sent back to the API Gateway and be JSON serialised as the body of the response to the initial HTTP request.
 
 
-4. ## Load balancing
+4. ## Load balancing (WeightedRoundRobin)
 
-<img src="./assets/BHbLBjnNU_mm_3SmnT7LGzi-FFV2dRtk7VFG0AEbKIpLmtDrTpQYUvlqgn6BmJ925M0QUnCe80bFCpADVMwC-CZgDb3Ayo8fPIrPIciWoBDti8KiY8VHq5L43FpFvy0IhI_LWStXdtoqo4QKqi-y-ec.png" alt="img" />
 Load balancing manages the request distribution, which can evenly distribute requests among available backend RPC servers.
+
+It routes client requests across all servers capable of fulfilling those requests in a manner that maximizes speed and capacity utilization and ensures that no one server is overworked, which could degrade performance. If a single server goes down, the load balancer redirects traffic to the remaining online servers. When a new server is added to the server group, the load balancer automatically starts to send requests to it.
+
+We are using the **WeightedRoundRobin** load balancer, which is also Kitex’s default strategy. It assigns weights to backend servers based on factors such as the server’s processing power or total bandwidth. A server with the most processing power will be assigned the maximum weight. It will also receive the maximum proportion of incoming requests from the load balancer.
+
+If all instances have the same weights, it will forward the requests to backend servers sequentially (one by one).
 
 5. ## Service Register and Discovery(consul)
 
-We are using **consul** for service registry and discovery. 
+A service registry is a database used to keep track of the available instances of each microservice in an application. Backend servers register their services in the service registry upon starting, by storing the instance IPs there.
 
-“Consul is a distributed, highly-available, and multi-datacenter aware tool for service discovery, configuration, and orchestration. Consul enables rapid deployment, configuration, and maintenance of service-oriented architectures at massive scale.”
+In order to send an API request to a service, the client or API gateway must know the location of the service that it’s addressing. The API Gateway will look for the target service by looking for the IP and service name to communicate with the correct backend server.
+
+We are using **consul** for service registry and discovery, and we are choosing `:8500` as the port for the consul server.
 
 <img src="./assets/cDUhiKzMgdlMeXauKKV0J6TIVUs04i7gLAGkEdFHoetMKmxd5Ol5QJt-dZ02zixM7J1mr9aRhHlY-Xxeflyaql0ddyh8LrAOEV8MEnJulMWCG5sYzBUKnjojHJ20qTfSVFWxAaF3vYOC2a-Grw-fPt0.png" alt="img" />
 <img src="./assets/DRgro7abRrIflF24-pJP405cLMNRVgz2Bl4xl-prGxa0dHcSbUIrPiVEKtLSVLLMQ_RNwEWd-WznSD1uwMz44wPZ2pbJyukNFB0o-0ZS6EYDpWd-xWnzCOl6oODULAm3AkZLGzLv8HEv6F42y6IV2k0.png" alt="img" />
@@ -272,14 +279,23 @@ The `hzUpdate()` function will execute the commands inside the `“updateIDL.sh�
 
 Then, this mechanism is encapsulated into the UpdateIDL() function, and is run on a separate goroutine, which ensures the update is executed asynchronously, so that the API Gateway is not affected.
 
-
 # **Design Diagrams and Architecture**
 
 ### Class Diagram
 
 <img src="./assets/Class Diagram.png" alt="Class Diagram" />
 
-<img src="./assets/0xHtOB2uM-zvrUhcekQOm73ow3EP_Njfv1w9uVu_Vwl9Up9KLA3zx7flgEE-oRtkKuK8D2WAe-FIAAeYp5nbRiQHFgGWqMjvK-NU8pgCkTF_yz6DhPoP3X6rWdhYwZRvyr136XwKZzCLvKDdd6xMwqU.png" alt="img" style="zoom:50%;" />
+### Architecture Diagram
+
+<img src="./assets/Architecture.png" alt="Architecture" />
+
+### Sequence Diagram
+
+<img src="./assets/Sequence Diagram.png" alt="Sequence Diagram" />
+
+
+
+### Code Structure
 
 ```
 .
@@ -348,14 +364,14 @@ These design decisions collectively contribute to the creation of a high-perform
 
 **==Docker is needed==**
 
-1. First, set up the consul server for service registry:
+1. First, set up the consul server for service registry (Here we choose `:8500` as the port for the consul server):
 
 `docker pull hashicorp/consul`
 
 `docker run -d -p 8500:8500 hashicorp/consul consul agent -dev -client=0.0.0.0`
 
 2. Then, download the executable files from [5594_Executable_Files](https://drive.google.com/drive/folders/115Memb2WfJusZ6Rt71P85IXIigN5wXFw?usp=sharing), and execute them to run the server:
-3. Finally, use Postman or other tools to send the requests to `0.0.0.0:8080`.
+3. Finally, use Postman or other tools to send the requests to `0.0.0.0:8080`. (`:8080` is a common port for HTTP web servers)
 
 e.g. Send a GET request to `0.0.0.0:8080/hello` with the following JSON body:
 
