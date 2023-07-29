@@ -56,7 +56,7 @@
   - **[5594_Milstone_3.mp4](https://drive.google.com/file/d/19cGmvQFT3CSOfpMklNhEt-G0G8XAlnVF/view?usp=sharing)**
 
 - **Project Log:**
-  - **[5594_Milestone3_Project_Log.pdf](https://drive.google.com/file/d/1QHxq5Z0Na4Wv0__zCKG6QYr6yJuSWn9M/view?usp=sharing)**
+  - **[5594_Milestone3_Project_Log.pdf](https://drive.google.com/file/d/1v-NAlaY-riiJf2-2tT5JaRZZE-f6uxz4/view?usp=sharing)**
 
 
 ## **Tech Stack**
@@ -239,7 +239,7 @@ We are using the **WeightedRoundRobin** load balancer, which is also Kitex’s d
 
 If all instances have the same weights, it will forward the requests to backend servers sequentially (one by one).
 
-5. ## Service Register and Discovery(consul)
+5. ## Service Register and Discovery (consul)
 
 A service registry is a database used to keep track of the available instances of each microservice in an application. Backend servers register their services in the service registry upon starting, by storing the instance IPs there.
 
